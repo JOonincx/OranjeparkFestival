@@ -32,13 +32,6 @@
         margin: 0;
 
     }
-    .advertentie{
-        margin: 0 auto 5em auto;
-        text-align: center;
-        width: 60%;
-        height: auto;
-        border: 3px solid white;
-    }
     .banner{
         color: white;
         /* background: black; */
@@ -53,8 +46,9 @@
         background-color: #F6BB93;
         border: 3px solid white;
         color: #EE541E;
-        margin: 5em auto 5em auto;
+        margin: 0 auto 5em auto;
         width: 80%;
+        height: 250px
     }
     .page-footer{
         font-weight: 900;
@@ -107,16 +101,46 @@
     #termsButton{
         width: 400px;
     }
+    @media screen and (max-width: 375px)
+    {
+        #termsButton{
+        width: 325px;
+        }
+    }
+    @media screen and (max-width: 320px)
+    {
+        #termsButton{
+        width: 300px;
+        }
+    }
 </style>
 <body>
     <div class="content">
         <div class="banner">
             <p><h1><center>Login op onze WiFi</center></h1></p>
         </div>
-        <div class="advertentie">
+        <div class="sponsorLogo">
         <?php
-        $timezone = date_default_timezone_get();
-        $date = date('m/d/Y h:i:s a', time());
+        //zet de standaard tijdzone naar europa/Amsterdam
+        // $timezone = date_default_timezone_set("Europe/Amsterdam");
+        // $date = date('Y-m-d H:i:s', time());
+        // var_dump($date);
+        // //explorer.mkis.nl:3306
+        // //haal alle sponsors op uit de database
+        // $db = new PDO('mysql:host=weefree.nl:3306;dbname=weefree_oranje', 'weefree_oranje', 'cwlPX91H5J');
+        // $sql = "SELECT * FROM `sponsors`";
+        // $results = $db->exec($sql);
+        // $sponsors = $results->fetchAll(PDO::FETCH_OBJ);
+
+        // var_dump($sponsors);
+        // //Kijken welke sponsor aan de beurt is
+        // foreach($sponsors as $sponsor)
+        // {
+        //     if($date >= $sponsor->beginDate && $date < $sponsor->endDate)
+        //     {
+        //         echo "<img src=$sponsor->filePath alt='Logo van sponsor'>";
+        //     }
+        // }
         ?>
         </div>
         <div class="buttons">
