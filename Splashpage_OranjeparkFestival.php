@@ -19,10 +19,10 @@
 </script>
 <style>
     html{
-        background-image:url('Background_Oranjefestival.png');
+        background-image:url('Background.jpg');
         background-repeat:no-repeat;
         background-size: cover;
-        background-position:center center;
+        background-position:top center;
         height: 100%;
     }
     body{
